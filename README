@@ -1,0 +1,59 @@
+gts
+------------------------------------------
+This is the GNU Triangulated Surface Library. It includes a number of 
+useful functions to deal with triangulated surfaces including, but not 
+limited to, multi-resolution models, Delaunay and Constrained Delaunay 
+triangulations, set operations on surfaces (intersection, union etc...), 
+bounding-boxes trees for efficient collision and intersection detection, 
+triangle strips generation for fast rendering.
+
+Runtime requirements:
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+  libglib2.0_0-2.22.2-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.8-1.8.5-10
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  libnetpbm-devel-10.47.2-1
+  libtool-2.2.7a-14
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.1.5-2
+
+Canonical website:
+  http://gts.sourceforge.net/
+
+Canonical download:
+  http://sourceforge.net/projects/gts/files/
+
+-------------------------------------------
+
+Build instructions:
+  unpack gts-0.7.6-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./gts-0.7.6-X.cygport all
+
+This will create:
+  /usr/src/gts-0.7.6-X-src.tar.bz2
+  /usr/src/gts-0.7.6-X.tar.bz2
+  /usr/src/libgts-devel-0.7.6-X.tar.bz2
+  /usr/src/libgts0.7_5-0.7.6-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.7.6-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

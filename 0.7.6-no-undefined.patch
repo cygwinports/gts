@@ -1,0 +1,11 @@
+--- origsrc/gts-0.7.6/src/Makefile.am	2005-01-18 22:48:22.000000000 -0600
++++ src/gts-0.7.6/src/Makefile.am	2009-11-04 21:19:08.836499400 -0600
+@@ -13,7 +13,7 @@ gts-config: gts-config.in
+ lib_LTLIBRARIES = libgts.la
+ 
+ libgts_la_LDFLAGS = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)\
+-	-release $(LT_RELEASE) -export-dynamic
++	-release $(LT_RELEASE) -export-dynamic -no-undefined
+ 
+ libgts_la_DEPENDENCIES = \
+ 	predicates_init.h
