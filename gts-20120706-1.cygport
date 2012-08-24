@@ -1,0 +1,28 @@
+CATEGORY="Graphics"
+SUMMARY="Triangulated surface library"
+DESCRIPTION="This is the GNU Triangulated Surface Library. It includes a
+number of useful functions to deal with triangulated surfaces including,
+but not limited to, multi-resolution models, Delaunay and Constrained
+Delaunay triangulations, set operations on surfaces (intersection, union
+etc...), bounding-boxes trees for efficient collision and intersection
+detection, triangle strips generation for fast rendering."
+HOMEPAGE="http://gts.sourceforge.net/"
+SRC_URI="http://gts.sourceforge.net/tarballs/${PN}-snapshot-${PV:2}.tar.gz"
+SRC_DIR="${PN}-snapshot-${PV:2}"
+
+PATCH_URI="01-no-undefined.patch 02-exeext.patch"
+
+PKG_NAMES="gts libgts0.7_5 libgts-devel"
+gts_SUMMARY="${SUMMARY} (utilities)"
+gts_CONTENTS="--exclude=gts-config* --exclude=gtstemplate* usr/bin/*.exe usr/share/doc/ usr/share/man/"
+libgts0_7_5_SUMMARY="${SUMMARY} (runtime)"
+libgts0_7_5_CONTENTS="usr/bin/cyggts-0-7-5.dll"
+libgts_devel_SUMMARY="${SUMMARY} (development)"
+libgts_devel_CONTENTS="usr/bin/gts-config usr/bin/gtstemplate usr/include/
+                       usr/lib/ usr/share/aclocal/ usr/share/man/man1/gts-config*
+                       usr/share/man/man1/gtstemplate*"
+
+# netpbm headers have moved to subdir since this pkg was last updated
+CPPFLAGS+=" -I/usr/include/netpbm"
+
+KEEP_LA_FILES="none"

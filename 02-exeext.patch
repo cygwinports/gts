@@ -1,5 +1,5 @@
---- origsrc/gts-0.7.6/src/Makefile.am	2005-01-18 22:48:22.000000000 -0600
-+++ src/gts-0.7.6/src/Makefile.am	2009-11-04 21:19:08.836499400 -0600
+--- origsrc/gts-snapshot-120706/src/Makefile.am	2012-07-06 06:27:04.000000000 -0500
++++ src/gts-snapshot-120706/src/Makefile.am	2012-08-24 00:16:51.351494400 -0500
 @@ -65,11 +65,11 @@ include_HEADERS = \
  predicates.o: predicates.c predicates_init.h predicates.h
  	$(COMPILE) -c $(srcdir)/predicates.c
@@ -7,12 +7,12 @@
 -predicates_init: predicates_init.c rounding.h
 -	$(COMPILE) $(srcdir)/predicates_init.c -o $(srcdir)/predicates_init
 +predicates_init$(EXEEXT): predicates_init.c rounding.h
-+	$(COMPILE) $(srcdir)/predicates_init.c -o predicates_init$(EXEEXT)
++	$(COMPILE) $< -o $@
  
 -predicates_init.h: predicates_init
 -	./predicates_init >  $(srcdir)/predicates_init.h
 +predicates_init.h: predicates_init$(EXEEXT)
-+	./predicates_init >  predicates_init.h
++	./predicates_init > $@
  
  CLEANFILES = $(BUILT_SOURCES)
  
