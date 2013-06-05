@@ -1,3 +1,6 @@
+NAME="gts"
+VERSION=20121130
+RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Triangulated surface library"
 DESCRIPTION="This is the GNU Triangulated Surface Library. It includes a
@@ -7,8 +10,8 @@ Delaunay triangulations, set operations on surfaces (intersection, union
 etc...), bounding-boxes trees for efficient collision and intersection
 detection, triangle strips generation for fast rendering."
 HOMEPAGE="http://gts.sourceforge.net/"
-SRC_URI="http://gts.sourceforge.net/tarballs/${PN}-snapshot-${PV:2}.tar.gz"
-SRC_DIR="${PN}-snapshot-${PV:2}"
+SRC_URI="http://gts.sourceforge.net/tarballs/${NAME}-snapshot-${VERSION:2}.tar.gz"
+SRC_DIR="${NAME}-snapshot-${VERSION:2}"
 
 PATCH_URI="01-no-undefined.patch 02-exeext.patch"
 
